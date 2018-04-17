@@ -435,6 +435,7 @@ ul, li, ol {
     background: url('../images/arrow-3.png') no-repeat bottom center;
 }
 
+
 .myNav ul > li > ul.level > li .submenu {
     width: 100%;
     background-color: #fcfcfc;
@@ -453,26 +454,24 @@ ul, li, ol {
     border-radius: 0 0 5px 5px;
 }
 
-.myNav ul > li > ul.level > li .submenu .rows .firstrow table {
+.myNav ul > li > ul.level > li .submenu .rows .firstrow > ul {
     width: 100%;
 }
 
-table {
-    border-collapse: collapse;
-}
 
-body, table, div, td, th {
+body,.firstrow > ul > li  {
     line-height: 22px;
 }
 
-.myNav ul > li > ul.level > li .submenu .rows .firstrow table td {
+.myNav ul > li > ul.level > li .submenu .rows .firstrow > ul > li {
     vertical-align: top;
     padding: 10px 10px 0 0;
     width: 25%;
     border-left: 1px solid #e2e2e2;
+    float: right;
 }
 
-.myNav ul > li > ul.level > li .submenu .rows .firstrow table td ul {
+.myNav ul > li > ul.level > li .submenu .rows .firstrow > ul > li > ul {
     list-style: none;
     font-size: 12px;
     padding-right: 0;
@@ -486,15 +485,15 @@ body, table, div, td, th {
     -ms-position: relative;
 }
 
-.myNav ul > li > ul.level > li .submenu .rows .firstrow table td ul > li {
+.myNav ul > li > ul.level > li .submenu .rows .firstrow > ul > li > ul > li {
     margin: 4px 0;
 }
 
-.myNav ul > li > ul.level > li .submenu .rows .firstrow table td ul > li > a {
+.myNav ul > li > ul.level > li .submenu .rows .firstrow > ul > li > ul > li > a {
     text-decoration: none;
 }
 
-.myNav ul > li > ul.level > li .submenu .rows .firstrow table td ul > li.title > a {
+.myNav ul > li > ul.level > li .submenu .rows .firstrow > ul > li > ul > li.title > a {
     padding-right: 5px;
     color: #16c1f3;
     text-decoration: none;
@@ -528,8 +527,8 @@ a:hover, a:focus {
 .myNav ul.root > li > ul.level > li .submenu .lastrow {
     z-index: 1;
     position: absolute;
-    max-width: 397px;
-    max-height: 335px;
+    width: 397px;
+    height: 335px;
 }
 
 .menu-top {
@@ -540,6 +539,10 @@ a:hover, a:focus {
 
 .myNav .root > li:hover .level {
     display: block;
+}
+.myNav ul > li > ul.level > li:hover .submenu {
+    display: block;
+    z-index: 1000;
 }
 .myNav .root > li:hover span > span {
     background-position:-35px -706px;
@@ -567,7 +570,7 @@ a:hover, a:focus {
 
     .myNav > ul > li > span {
         width: 100%;
-        text-align: center;
+        /*text-align: center;*/
     }
 
     .myNav ul > li > ul.level > li {
@@ -580,18 +583,25 @@ a:hover, a:focus {
 
     .myNav ul > li > ul.level {
         height: 300px;
-        text-align: center;
+        /*text-align: center;*/
+        padding-right: 5px;
     }
 
-    .myNav ul.root > li > ul.level > li .submenu .lastrow {
-        width: 100%;
-        height: 100%;
-    }
+
     .myNav ul > li > ul.level > li > a{
         padding: 0;
     }
     .myNav > ul > li {
         padding-left: 0 !important;
+    }
+    .myNav ul > li > ul.level > li .submenu .rows .firstrow > ul > li{
+        width: 100%;
+    }
+
+}
+@media (max-width: 400px) {
+    .myNav ul.root > li > ul.level > li .submenu .lastrow {
+      display: none;
     }
 }
 /*Responsive Digi Nav*/
@@ -773,7 +783,7 @@ width: 80%;
     background-color: #fff;
     overflow: hidden;
 }
-.menu-bar >div > div >div > ul > li a {
+.menu-bar >div>div > div >div > ul > li a {
     font: 13px/30px B-Yekan;
     color: #777 !important;
 }
@@ -788,7 +798,7 @@ width: 80%;
     background-color: #646871;
     min-height: 78px;
 }
-.copyright-bar >div >div >div {
+.copyright-bar > div>div >div >div {
     float: right;
     margin: 10px 0 0 0;
     color: #fff !important;
@@ -798,13 +808,13 @@ width: 80%;
     opacity: 1;
     color: #fff !important;
 }
-.copyright-bar > div > div > span {
+.copyright-bar > div > div > div > span {
     float: right;
     font-size: 12px;
     line-height: 0;
     margin-top: 12px;
 }
-.copyright-bar > div > div > div#copyright-full {
+.copyright-bar > div > div > div > div#copyright-full {
     font-size: 8pt;
     margin-top: 8px;
 }
@@ -832,19 +842,34 @@ width: 80%;
 .info-bar{
     position: relative;
 }
-.info-bar > span {
-    position: absolute;
-    left: 25px;
-    top: 5px;
-    display: none;
-    cursor: pointer;
+.collapse-footer{
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
-@media (max-width: 1180px) {
-    .collapse-1, .footer-2 , .subscribe-bar , .menu-bar , .copyright-bar {
+.collapse-footer > img {
+    cursor: pointer;
+    margin-right: 5px;
+}
+.collapse-footer > img{
+    display: none;
+}
+@media (max-width: 700px) {
+    .info-bar,.subscribe-bar,.menu-bar,.copyright-bar,.footer-2 {
         display: none;
     }
-    .info-bar > span {
+    .collapse-footer > img {
         display: block;
+    }
+
+}
+@media (min-width: 700px) {
+    .info-bar,.subscribe-bar,.menu-bar,.copyright-bar,.footer-2 {
+        display: block;
+    }
+    .collapse-footer > img {
+        display: none;
     }
 
 }

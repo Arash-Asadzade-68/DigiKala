@@ -1,42 +1,28 @@
-function showReplies(tag) {
-    var tag = $(tag);
-    var parentP= tag.parent('p');
-    parentP.next().fadeToggle();
-}
+// function showReplies(tag) {
+//     var tag = $(tag);
+//     var parentP = tag.parent('p');
+//     parentP.next().fadeToggle();
+// }
 
 $('.Red > a').hover(function () {
-   $('.Red >a > ul').show();
-},function () {
+    $('.Red >a > ul').show();
+}, function () {
     $('.Red >a > ul').hide();
 });
-
-// var menu=$('.myNav .root > li> span');
-// menu.hover(function () {
+$('.collapse-footer > img').click(function () {
+    $(this).toggleClass('open');
+    if($(this).hasClass('open')){
+        $(this).attr('src',"images/navigate-up (3).png");
+    }else{
+        $(this).attr('src',"images/navigate-down (1).png");
+    }
+    var parentDiv=$(this).parent('div');
+    parentDiv.next().fadeToggle();
+});
+// function menuDown(tag) {
+//     var tag = $(tag);
+//     var parentDiv = tag.parent('div');
+//     parentDiv.next().fadeToggle();
 //
-//     $('span', this).removeClass('fa-angle-down');
-//     $('span', this).addClass('fa-angle-up');
-// }, function () {
-//
-//     $('span', this).removeClass('fa-angle-up');
-//     $('span', this).addClass('fa-angle-down');
-//
-//
-// });
-
-
-//
-// menu.click(function () {
-//     $('.myNav .root > li .level').each(function () {
-//        $(this).fadeToggle();
-//     });
-//    submenu.removeClass('fa-angel-down');
-//    submenu.addClass('fa-angel-up');
-//
-//
-// });
-
-function menuDown(tag) {
-    var tag = $(tag);
-    tag.next().fadeToggle();
-}
+// }
 

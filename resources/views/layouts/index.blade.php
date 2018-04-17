@@ -14,8 +14,8 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="Red">
-                    <span class="fa fa-sign-in"><span>فروشگاه اینترنتی دیجی کالا،<a href="#">وارد شوید</a></span></span>
-                    <span class="fa fa-user"><a href="#">ثبت نام کنید</a></span>
+                    <span class="fa fa-sign-in"><span>فروشگاه اینترنتی دیجی کالا،<a href="{{ route('login') }}">وارد شوید</a></span></span>
+                    <span class="fa fa-user"><a href="{{ route('register') }}">ثبت نام کنید</a></span>
                     <a href="#">
                         <ul>
                             <li>راهنمای خرید هدیه</li>
@@ -43,7 +43,9 @@
                 </div>
             </div>
             <div class="col-md-4 brand">
+                <a href="{{ url('/home') }}">
                 <img src="{{asset('images/DigiKala.png')}}" alt="" class="img-fluid">
+                </a>
             </div>
         </div>
     </div>
@@ -61,10 +63,10 @@
                                                 <div class="submenu">
                                                     <div class="rows">
                                                         <div class="firstrow">
-                                                            <table>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>
+                                                            <ul>
+
+
+                                                                    <li>
                                                                         <ul>
                                                                             <li class="title"><a
                                                                                         href="/main/electronic-devices/mobile"
@@ -119,8 +121,8 @@
                                                                                         title="مشاهده انواع گوشی موبایل">مشاهده
                                                                                     موارد بیشتر</a></li>
                                                                         </ul>
-                                                                    </td>
-                                                                    <td class="alternate">
+                                                                    </li>
+                                                                    <li class="alternate">
                                                                         <ul>
                                                                             <li class="title"><a
                                                                                         href="/main/electronic-devices/mobile/mobile-phone"
@@ -175,8 +177,8 @@
                                                                                         title="انواع هدفون">هدفون</a>
                                                                             </li>
                                                                         </ul>
-                                                                    </td>
-                                                                    <td>
+                                                                    </li>
+                                                                    <li>
                                                                         <ul>
                                                                             <li class="title"><a
                                                                                         href="/main/electronic-devices/mobile/mobile-accessories"
@@ -227,8 +229,8 @@
                                                                                         title="انواع گجت های موبایل">گجت
                                                                                     های موبایل</a></li>
                                                                         </ul>
-                                                                    </td>
-                                                                    <td class="last alternate">
+                                                                    </li>
+                                                                    <li class="last alternate">
                                                                         <ul>
                                                                             <li class="title"><a
                                                                                         href="/search/category-mobile-phone"
@@ -251,10 +253,10 @@
                                                                                         title="گوشی های موبایل مقاوم در برابر آب">مقاوم
                                                                                     در برابر آب</a></li>
                                                                         </ul>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
+                                                                    </li>
+
+
+                                                            </ul>
                                                         </div>
                                                         <div class="lastrow img-fluid"></div>
                                                     </div>
@@ -267,430 +269,8 @@
                                         </ul>
 
                                     </li>
-                                    <li><span>مد و پوشاک <span class=""></span></span>
-                                        <ul class="level">
-                                            <li><a href="" title="موبایل">مردانه</a>
-                                                <div class="submenu">
-                                                    <div class="rows">
-                                                        <div class="firstrow">
-                                                            <table>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li class="title"><a
-                                                                                        href="/main/electronic-devices/mobile"
-                                                                                        title="انواع گوشی موبایل">گوشی
-                                                                                    موبایل</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=10"
-                                                                                        title="گوشی های موبایل Apple">Apple</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=18"
-                                                                                        title="گوشی های موبایل Samsung">Samsung</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=22"
-                                                                                        title="گوشی های موبایل LG">LG</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=82"
-                                                                                        title="گوشی های موبایل Huawei">Huawei</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=26"
-                                                                                        title="گوشی های موبایل HTC">HTC</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=1"
-                                                                                        title="گوشی های موبایل Sony">Sony</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=51"
-                                                                                        title="گوشی های موبایل Microsoft">Microsoft</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=20"
-                                                                                        title="گوشی های موبایل Nokia">Nokia</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=4"
-                                                                                        title="گوشی های موبایل ASUS">ASUS</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=94"
-                                                                                        title="گوشی های موبایل Lenovo">Lenovo</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=23"
-                                                                                        title="گوشی های موبایل Motorola">Motorola</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone"
-                                                                                        title="مشاهده انواع گوشی موبایل">مشاهده
-                                                                                    موارد بیشتر</a></li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td class="alternate">
-                                                                        <ul>
-                                                                            <li class="title"><a
-                                                                                        href="/main/electronic-devices/mobile/mobile-phone"
-                                                                                        title="انواع گوشی">انواع
-                                                                                    گوشی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A136][0]=197"
-                                                                                        title="گوشی های موبایل دو سیم کارت">گوشی
-                                                                                    دو سیم کارت</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A136][0]=196"
-                                                                                        title="گوشی های موبایل تک سیم کارت">گوشی
-                                                                                    تک سیم کارت</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A18186][0]=21340"
-                                                                                        title="گوشی های موبایل 4G">گوشی
-                                                                                    های 4G</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=24917"
-                                                                                        title="گوشی های موبایل کلاسیک">گوشی
-                                                                                    های کلاسیک</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=21003"
-                                                                                        title="گوشی های موبایل فبلت">فبلت</a>
-                                                                            </li>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-mobile-phone"
-                                                                                        title="گوشی های موبایل بر اساس سیستم عامل">بر
-                                                                                    اساس سیستم عامل</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?type[0]=201"
-                                                                                        title="گوشی های موبایل اندروید">اندروید</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?type[0]=202"
-                                                                                        title="گوشی های موبایل iOS">iOS</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?type[0]=1314"
-                                                                                        title="گوشی های موبایل ویندوز فون">ویندوز
-                                                                                    فون</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?type[0]=1315"
-                                                                                        title="گوشی های موبایل با سیستم عامل های متفرقه">سایر
-                                                                                    سیستم عامل ها</a></li>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-headphone?type[0]=127"
-                                                                                        title="انواع هدفون توگوشی">هدفون
-                                                                                    توگوشی</a></li>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-headphone"
-                                                                                        title="انواع هدفون">هدفون</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li class="title"><a
-                                                                                        href="/main/electronic-devices/mobile/mobile-accessories"
-                                                                                        title="لوازم جانبی گوشی موبایل">لوازم
-                                                                                    جانبی گوشی موبایل</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-cell-phone-screen-guard"
-                                                                                        title="محافظ صفحه نمایش گوشی موبایل">محافظ
-                                                                                    صفحه نمایش</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-cell-phone-pouch-cover"
-                                                                                        title="کیف و کاور گوشی گوشی موبایل">کیف
-                                                                                    و کاور گوشی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-handsfree"
-                                                                                        title="هندزفری گوشی موبایل">هندزفری</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-memory-cards?type[0]=6522"
-                                                                                        title="کارت حافظه microSD گوشی موبایل">کارت
-                                                                                    حافظه microSD</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-power-bank"
-                                                                                        title="پاوربانک گوشی موبایل">پاوربانک</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-cell-phone-holder"
-                                                                                        title="مونوپاد و پایه نگهدارنده گوشی موبایل">مونوپاد
-                                                                                    و پایه نگهدارنده</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-car-charger"
-                                                                                        title="شارژر موبایل">شارژر
-                                                                                    موبایل</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-cell-phone-battery"
-                                                                                        title="باتری گوشی گوشی موبایل">باتری
-                                                                                    گوشی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-stylus"
-                                                                                        title="قلم لمسی (Stylus) مخصوص گوشی موبایل">قلم
-                                                                                    لمسی (Stylus)</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/main/electronic-devices/mobile/mobile-accessories"
-                                                                                        title="مشاهده انواع لوازم جانبی موبایل">مشاهده
-                                                                                    موارد بیشتر</a></li>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-cell-phone-kits"
-                                                                                        title="انواع گجت های موبایل">گجت
-                                                                                    های موبایل</a></li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td class="last alternate">
-                                                                        <ul>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-mobile-phone"
-                                                                                        title="انواع گوشی موبایل بر اساس رده کاربری">رده
-                                                                                    ی کاربری</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=22806"
-                                                                                        title="گوشی های موبایل مناسب بازی">مناسب
-                                                                                    بازی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=13404"
-                                                                                        title="گوشی های موبایل مناسب عکاسی">مناسب
-                                                                                    عکاسی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=22802"
-                                                                                        title="گوشی های موبایل مناسب عکاسی سلفی">مناسب
-                                                                                    عکاسی سلفی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=13400"
-                                                                                        title="گوشی های موبایل مقاوم در برابر آب">مقاوم
-                                                                                    در برابر آب</a></li>
-                                                                        </ul>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="lastrow img-fluid"></div>
-                                                    </div>
-                                                </div>
 
-                                            </li>
-                                            <li><a href="">زنانه</a></li>
-                                            <li><a href="">بچگانه</a></li>
-                                            <li><a href="">ورزشی</a></li>
-                                        </ul>
 
-                                    </li>
-                                    <li><span>کالای دیجیتال <span class=""></span></span>
-                                        <ul class="level">
-                                            <li><a href="" title="موبایل">موبایل</a>
-                                                <div class="submenu">
-                                                    <div class="rows">
-                                                        <div class="firstrow">
-                                                            <table>
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li class="title"><a
-                                                                                        href="/main/electronic-devices/mobile"
-                                                                                        title="انواع گوشی موبایل">گوشی
-                                                                                    موبایل</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=10"
-                                                                                        title="گوشی های موبایل Apple">Apple</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=18"
-                                                                                        title="گوشی های موبایل Samsung">Samsung</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=22"
-                                                                                        title="گوشی های موبایل LG">LG</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=82"
-                                                                                        title="گوشی های موبایل Huawei">Huawei</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=26"
-                                                                                        title="گوشی های موبایل HTC">HTC</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=1"
-                                                                                        title="گوشی های موبایل Sony">Sony</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=51"
-                                                                                        title="گوشی های موبایل Microsoft">Microsoft</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=20"
-                                                                                        title="گوشی های موبایل Nokia">Nokia</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=4"
-                                                                                        title="گوشی های موبایل ASUS">ASUS</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=94"
-                                                                                        title="گوشی های موبایل Lenovo">Lenovo</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?brand[0]=23"
-                                                                                        title="گوشی های موبایل Motorola">Motorola</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone"
-                                                                                        title="مشاهده انواع گوشی موبایل">مشاهده
-                                                                                    موارد بیشتر</a></li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td class="alternate">
-                                                                        <ul>
-                                                                            <li class="title"><a
-                                                                                        href="/main/electronic-devices/mobile/mobile-phone"
-                                                                                        title="انواع گوشی">انواع
-                                                                                    گوشی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A136][0]=197"
-                                                                                        title="گوشی های موبایل دو سیم کارت">گوشی
-                                                                                    دو سیم کارت</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A136][0]=196"
-                                                                                        title="گوشی های موبایل تک سیم کارت">گوشی
-                                                                                    تک سیم کارت</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A18186][0]=21340"
-                                                                                        title="گوشی های موبایل 4G">گوشی
-                                                                                    های 4G</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=24917"
-                                                                                        title="گوشی های موبایل کلاسیک">گوشی
-                                                                                    های کلاسیک</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=21003"
-                                                                                        title="گوشی های موبایل فبلت">فبلت</a>
-                                                                            </li>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-mobile-phone"
-                                                                                        title="گوشی های موبایل بر اساس سیستم عامل">بر
-                                                                                    اساس سیستم عامل</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?type[0]=201"
-                                                                                        title="گوشی های موبایل اندروید">اندروید</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?type[0]=202"
-                                                                                        title="گوشی های موبایل iOS">iOS</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?type[0]=1314"
-                                                                                        title="گوشی های موبایل ویندوز فون">ویندوز
-                                                                                    فون</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?type[0]=1315"
-                                                                                        title="گوشی های موبایل با سیستم عامل های متفرقه">سایر
-                                                                                    سیستم عامل ها</a></li>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-headphone?type[0]=127"
-                                                                                        title="انواع هدفون توگوشی">هدفون
-                                                                                    توگوشی</a></li>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-headphone"
-                                                                                        title="انواع هدفون">هدفون</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li class="title"><a
-                                                                                        href="/main/electronic-devices/mobile/mobile-accessories"
-                                                                                        title="لوازم جانبی گوشی موبایل">لوازم
-                                                                                    جانبی گوشی موبایل</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-cell-phone-screen-guard"
-                                                                                        title="محافظ صفحه نمایش گوشی موبایل">محافظ
-                                                                                    صفحه نمایش</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-cell-phone-pouch-cover"
-                                                                                        title="کیف و کاور گوشی گوشی موبایل">کیف
-                                                                                    و کاور گوشی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-handsfree"
-                                                                                        title="هندزفری گوشی موبایل">هندزفری</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-memory-cards?type[0]=6522"
-                                                                                        title="کارت حافظه microSD گوشی موبایل">کارت
-                                                                                    حافظه microSD</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-power-bank"
-                                                                                        title="پاوربانک گوشی موبایل">پاوربانک</a>
-                                                                            </li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-cell-phone-holder"
-                                                                                        title="مونوپاد و پایه نگهدارنده گوشی موبایل">مونوپاد
-                                                                                    و پایه نگهدارنده</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-car-charger"
-                                                                                        title="شارژر موبایل">شارژر
-                                                                                    موبایل</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-cell-phone-battery"
-                                                                                        title="باتری گوشی گوشی موبایل">باتری
-                                                                                    گوشی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-stylus"
-                                                                                        title="قلم لمسی (Stylus) مخصوص گوشی موبایل">قلم
-                                                                                    لمسی (Stylus)</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/main/electronic-devices/mobile/mobile-accessories"
-                                                                                        title="مشاهده انواع لوازم جانبی موبایل">مشاهده
-                                                                                    موارد بیشتر</a></li>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-cell-phone-kits"
-                                                                                        title="انواع گجت های موبایل">گجت
-                                                                                    های موبایل</a></li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td class="last alternate">
-                                                                        <ul>
-                                                                            <li class="title"><a
-                                                                                        href="/search/category-mobile-phone"
-                                                                                        title="انواع گوشی موبایل بر اساس رده کاربری">رده
-                                                                                    ی کاربری</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=22806"
-                                                                                        title="گوشی های موبایل مناسب بازی">مناسب
-                                                                                    بازی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=13404"
-                                                                                        title="گوشی های موبایل مناسب عکاسی">مناسب
-                                                                                    عکاسی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=22802"
-                                                                                        title="گوشی های موبایل مناسب عکاسی سلفی">مناسب
-                                                                                    عکاسی سلفی</a></li>
-                                                                            <li class="item"><a
-                                                                                        href="/search/category-mobile-phone?attribute[A13366][0]=13400"
-                                                                                        title="گوشی های موبایل مقاوم در برابر آب">مقاوم
-                                                                                    در برابر آب</a></li>
-                                                                        </ul>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <div class="lastrow img-fluid"></div>
-                                                    </div>
-                                                </div>
-
-                                            </li>
-                                            <li><a href="">موبایل</a></li>
-                                            <li><a href="">موبایل</a></li>
-                                            <li><a href="">موبایل</a></li>
-                                        </ul>
-
-                                    </li>
 
 
                                 </ul>
@@ -708,10 +288,13 @@
 @yield('content')
 </body>
 <footer>
-    <div class="container-fluid">
-        <div class="row info-bar">
-            <span onclick="menuDown(this)" class="fa fa-bars fa-2x" ></span>
-            <div class="container collapse-1">
+    <div class="collapse-footer justify-content-center container">
+        <img  src="{{asset('images/navigate-down (1).png')}}">
+    </div>
+    <div class="container-fluid info-bar">
+        <div class="row">
+
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-4"><span class="info-bar-right"> ۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم.</span>
                     </div>
@@ -732,8 +315,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row footer-2">
+    <div class="collapse-footer justify-content-center container">
+        <img  src="{{asset('images/navigate-down (1).png')}}">
+    </div>
+    <div class="container-fluid footer-2">
+        <div class="row ">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-2">
@@ -760,8 +346,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row subscribe-bar">
+    <div class="collapse-footer justify-content-center container">
+        <img  src="{{asset('images/navigate-down (1).png')}}">
+    </div>
+    <div class="container-fluid subscribe-bar">
+        <div class="row">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
@@ -844,8 +433,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row menu-bar">
+    <div class="collapse-footer justify-content-center container">
+        <img  src="{{asset('images/navigate-down (1).png')}}">
+    </div>
+    <div class="container-fluid menu-bar">
+        <div class="row ">
             <div class="container">
                 <div class="row">
                     <div class="col-md-2">
@@ -965,8 +557,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid ">
-        <div class="row copyright-bar">
+    <div class="collapse-footer justify-content-center container">
+        <img  src="{{asset('images/navigate-down (1).png')}}">
+    </div>
+    <div class="container-fluid copyright-bar">
+        <div class="row">
             <div class="container">
                 <div class="row">
                     <div class="col-md-2">

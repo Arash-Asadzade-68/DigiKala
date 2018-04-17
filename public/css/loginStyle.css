@@ -1,0 +1,28 @@
+.card-header
+{
+    padding-right: 15px;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: B-Yekan;
+    color: #555;
+}
+.card-body{
+    font: normal 13px B-Yekan !important;
+    color: #4d4d4d !important;
+}
+.forget{
+    font: normal 13px B-Yekan !important;
+    color: #2196f3 !important;
+}
+.forget:hover{
+    color: #FF5252!important;
+}
+.login {
+    height: 49px;
+    background: url("../images/slices.png");
+    background-position: -1305px -188px;
+    width: 49px;
+    display: inline-block;
+    background-color: #2196f3;
+    color: #fff;
+}
