@@ -64,6 +64,13 @@ ul, li, ol {
     padding-right: 10px;
     color: orangered;
 }
+@media (max-width: 500px) {
+    .Red > a{
+        display: block;
+        width:100%;
+    }
+
+}
 
 .Red > a > ul {
     padding: 0;
@@ -71,7 +78,7 @@ ul, li, ol {
     display: none;
     position: absolute;
     list-style: none;
-    top: 19px;
+    top: 23px;
     right: 13px;
     border-radius: 4px;
     border: 1px solid #ccc;
