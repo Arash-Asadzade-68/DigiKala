@@ -19,9 +19,10 @@
                         <span class="fa fa-sign-in"><span>فروشگاه اینترنتی دیجی کالا،<a href="{{ route('login') }}">وارد شوید</a></span></span>
                         <span class="fa fa-user"><a href="{{ route('register') }}">ثبت نام کنید</a></span>
                     @else
-                        <span class="fa fa-unlock" style="font-size: 13px" ><span style="color:#00ca6d;"> {{ Auth::user()->name }}،</span>خوش آمدید</span>
-                     <span class="fa fa-users"><a href="#">مشاهده پنل کاربری</a></span>
-                        <span ><a href="{{ route('logout') }}"  onclick="event.preventDefault();
+                        <span class="fa fa-unlock" style="font-size: 13px"><span style="color:#00ca6d;"> {{ Auth::user()->name }}
+                                ،</span>خوش آمدید</span>
+                        <span class="fa fa-users"><a href="#">مشاهده پنل کاربری</a></span>
+                        <span><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('خروج') }}
                                     </a>
@@ -73,219 +74,53 @@
                         <div class="col-md-12 menu-top">
                             <div class="myNav">
                                 <ul class="root">
-                                    <li><span>کالای دیجیتال <span class=""></span></span>
-                                        <ul class="level">
-                                            <li><a href="" title="موبایل">موبایل</a>
-                                                <div class="submenu">
-                                                    <div class="rows">
-                                                        <div class="firstrow">
-                                                            <ul>
+                                    @foreach(App\Category::where('parent_id',0)->get() as $cats)
+                                        <li><span>{{$cats->name}}<span class=""></span></span>
+                                            @if($cats->sub_cat->count())
+                                                <ul class="level">
 
+                                                    @foreach($cats->sub_cat as $sub)
+                                                        <li><a href="" title="{{$sub->name}}">{{$sub->name}}</a>
+                                                            @if($sub->sub_cat->count())
+                                                                <div class="submenu">
+                                                                    <div class="rows">
+                                                                        <div class="firstrow">
+                                                                            <ul>
 
-                                                                <li>
-                                                                    <ul>
-                                                                        <li class="title"><a
-                                                                                    href="/main/electronic-devices/mobile"
-                                                                                    title="انواع گوشی موبایل">گوشی
-                                                                                موبایل</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=10"
-                                                                                    title="گوشی های موبایل Apple">Apple</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=18"
-                                                                                    title="گوشی های موبایل Samsung">Samsung</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=22"
-                                                                                    title="گوشی های موبایل LG">LG</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=82"
-                                                                                    title="گوشی های موبایل Huawei">Huawei</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=26"
-                                                                                    title="گوشی های موبایل HTC">HTC</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=1"
-                                                                                    title="گوشی های موبایل Sony">Sony</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=51"
-                                                                                    title="گوشی های موبایل Microsoft">Microsoft</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=20"
-                                                                                    title="گوشی های موبایل Nokia">Nokia</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=4"
-                                                                                    title="گوشی های موبایل ASUS">ASUS</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=94"
-                                                                                    title="گوشی های موبایل Lenovo">Lenovo</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?brand[0]=23"
-                                                                                    title="گوشی های موبایل Motorola">Motorola</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone"
-                                                                                    title="مشاهده انواع گوشی موبایل">مشاهده
-                                                                                موارد بیشتر</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="alternate">
-                                                                    <ul>
-                                                                        <li class="title"><a
-                                                                                    href="/main/electronic-devices/mobile/mobile-phone"
-                                                                                    title="انواع گوشی">انواع
-                                                                                گوشی</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A136][0]=197"
-                                                                                    title="گوشی های موبایل دو سیم کارت">گوشی
-                                                                                دو سیم کارت</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A136][0]=196"
-                                                                                    title="گوشی های موبایل تک سیم کارت">گوشی
-                                                                                تک سیم کارت</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A18186][0]=21340"
-                                                                                    title="گوشی های موبایل 4G">گوشی
-                                                                                های 4G</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A13366][0]=24917"
-                                                                                    title="گوشی های موبایل کلاسیک">گوشی
-                                                                                های کلاسیک</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A13366][0]=21003"
-                                                                                    title="گوشی های موبایل فبلت">فبلت</a>
-                                                                        </li>
-                                                                        <li class="title"><a
-                                                                                    href="/search/category-mobile-phone"
-                                                                                    title="گوشی های موبایل بر اساس سیستم عامل">بر
-                                                                                اساس سیستم عامل</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?type[0]=201"
-                                                                                    title="گوشی های موبایل اندروید">اندروید</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?type[0]=202"
-                                                                                    title="گوشی های موبایل iOS">iOS</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?type[0]=1314"
-                                                                                    title="گوشی های موبایل ویندوز فون">ویندوز
-                                                                                فون</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?type[0]=1315"
-                                                                                    title="گوشی های موبایل با سیستم عامل های متفرقه">سایر
-                                                                                سیستم عامل ها</a></li>
-                                                                        <li class="title"><a
-                                                                                    href="/search/category-headphone?type[0]=127"
-                                                                                    title="انواع هدفون توگوشی">هدفون
-                                                                                توگوشی</a></li>
-                                                                        <li class="title"><a
-                                                                                    href="/search/category-headphone"
-                                                                                    title="انواع هدفون">هدفون</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <ul>
-                                                                        <li class="title"><a
-                                                                                    href="/main/electronic-devices/mobile/mobile-accessories"
-                                                                                    title="لوازم جانبی گوشی موبایل">لوازم
-                                                                                جانبی گوشی موبایل</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-cell-phone-screen-guard"
-                                                                                    title="محافظ صفحه نمایش گوشی موبایل">محافظ
-                                                                                صفحه نمایش</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-cell-phone-pouch-cover"
-                                                                                    title="کیف و کاور گوشی گوشی موبایل">کیف
-                                                                                و کاور گوشی</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-handsfree"
-                                                                                    title="هندزفری گوشی موبایل">هندزفری</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-memory-cards?type[0]=6522"
-                                                                                    title="کارت حافظه microSD گوشی موبایل">کارت
-                                                                                حافظه microSD</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-power-bank"
-                                                                                    title="پاوربانک گوشی موبایل">پاوربانک</a>
-                                                                        </li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-cell-phone-holder"
-                                                                                    title="مونوپاد و پایه نگهدارنده گوشی موبایل">مونوپاد
-                                                                                و پایه نگهدارنده</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-car-charger"
-                                                                                    title="شارژر موبایل">شارژر
-                                                                                موبایل</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-cell-phone-battery"
-                                                                                    title="باتری گوشی گوشی موبایل">باتری
-                                                                                گوشی</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-stylus"
-                                                                                    title="قلم لمسی (Stylus) مخصوص گوشی موبایل">قلم
-                                                                                لمسی (Stylus)</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/main/electronic-devices/mobile/mobile-accessories"
-                                                                                    title="مشاهده انواع لوازم جانبی موبایل">مشاهده
-                                                                                موارد بیشتر</a></li>
-                                                                        <li class="title"><a
-                                                                                    href="/search/category-cell-phone-kits"
-                                                                                    title="انواع گجت های موبایل">گجت
-                                                                                های موبایل</a></li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="last alternate">
-                                                                    <ul>
-                                                                        <li class="title"><a
-                                                                                    href="/search/category-mobile-phone"
-                                                                                    title="انواع گوشی موبایل بر اساس رده کاربری">رده
-                                                                                ی کاربری</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A13366][0]=22806"
-                                                                                    title="گوشی های موبایل مناسب بازی">مناسب
-                                                                                بازی</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A13366][0]=13404"
-                                                                                    title="گوشی های موبایل مناسب عکاسی">مناسب
-                                                                                عکاسی</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A13366][0]=22802"
-                                                                                    title="گوشی های موبایل مناسب عکاسی سلفی">مناسب
-                                                                                عکاسی سلفی</a></li>
-                                                                        <li class="item"><a
-                                                                                    href="/search/category-mobile-phone?attribute[A13366][0]=13400"
-                                                                                    title="گوشی های موبایل مقاوم در برابر آب">مقاوم
-                                                                                در برابر آب</a></li>
-                                                                    </ul>
-                                                                </li>
+                                                                                @foreach($sub->sub_cat as $sub1)
+                                                                                    <li>
+                                                                                        <ul>
+                                                                                            <li class="title"><a
+                                                                                                        href="/main/electronic-devices/mobile"
+                                                                                                        title=" {{$sub1->name}} "> {{$sub1->name}}</a>
+                                                                                            </li>
+                                                                                            @if($cats->sub_cat->count())
+                                                                                                @foreach($sub1->sub_cat as $sub2)
+                                                                                                    <li class="item"><a
+                                                                                                                href="/search/category-mobile-phone?brand[0]=10"
+                                                                                                                title="{{$sub2->name}}">{{$sub2->name}}</a>
+                                                                                                    </li>
+                                                                                                @endforeach
+                                                                                            @endif
 
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                @endforeach
 
-                                                            </ul>
-                                                        </div>
-                                                        <div class="lastrow img-fluid"></div>
-                                                    </div>
-                                                </div>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="lastrow img-fluid"></div>
+                                                                    </div>
+                                                                </div>
+                                                            @endif
 
-                                            </li>
-                                            <li><a href="">موبایل</a></li>
-                                            <li><a href="">موبایل</a></li>
-                                            <li><a href="">موبایل</a></li>
-                                        </ul>
+                                                        </li>
+                                                    @endforeach
 
-                                    </li>
-
+                                                </ul>
+                                            @endif
+                                        </li>
+                                    @endforeach
 
                                 </ul>
                             </div>
@@ -298,8 +133,10 @@
     </div>
 </head>
 
-<body>
-@yield('content')
+<body >
+<div class="container-fluid" style="background-color:#ddd; padding-top: 10px; padding-bottom: 10px;">
+    @yield('content')
+</div>
 </body>
 <footer>
     <div class="collapse-footer justify-content-center container">
@@ -454,119 +291,28 @@
         <div class="row ">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2">
-                        <span class="title"><a title="کالای دیجیتال" href="/Main/Electronic-Devices">کالای دیجیتال</a>
+                    @foreach(App\Category::where('parent_id',0)->get() as $cats)
+                        @if ($loop->index == 6)
+                            @break
+                        @endif
+                        <div class="col-md-2">
+                        <span class="title"><a title="{{$cats->name}}"
+                                               href="/Main/Electronic-Devices">{{$cats->name}}</a>
                         </span>
-                        <ul>
-                            <li><a href="/Main/Electronic-Devices/Mobile/" title="موبایل" target="_blank">موبایل</a>
-                            </li>
-                            <li><a href="/Main/Electronic-Devices/Tablet-EBook-Reader/" title="تبلت و کتابخوان"
-                                   target="_blank">تبلت و کتابخوان</a></li>
-                            <li><a href="/Main/Electronic-Devices/Laptop/" title="لپتاپ" target="_blank">لپتاپ</a></li>
-                            <li><a href="/Main/Electronic-Devices/Camera/" title="دوربین" target="_blank">دوربین</a>
-                            </li>
-                            <li><a href="/Main/Electronic-Devices/Computer-Parts/" title="کامپیوتر و تجهیزات جانبی"
-                                   target="_blank">کامپیوتر و تجهیزات جانبی</a></li>
-                            <li><a href="/Main/Electronic-Devices/Office-Machines/" title="ماشین های اداری"
-                                   target="_blank">ماشین های اداری</a></li>
-                            <li><a href="/Main/Electronic-Devices/Video-Audio-Entertainment/" title="صوتی و تصویری"
-                                   target="_blank">صوتی و تصویری</a></li>
-                            <li><a href="/Main/Electronic-Devices/Accessories-Main/" title="لوازم جانبی کالای دیجیتال"
-                                   target="_blank">لوازم جانبی کالای دیجیتال</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <span class="title"><a title="لوازم خانگی" href="/Main/Home-and-Kitchen">لوازم خانگی</a></span>
-                        <ul>
-                            <li><a href="/Main/Home-and-Kitchen/Video-Audio-Entertainment/" title="صوتی و تصویری"
-                                   target="_blank">صوتی و تصویری</a></li>
-                            <li><a href="/Main/Home-and-Kitchen/Home-Appliance/" title="لوازم خانگی برقی"
-                                   target="_blank">لوازم خانگی برقی</a></li>
-                            <li><a href="/Main/Home-and-Kitchen/Home-kitchen-Appliances/" title="آشپزخانه"
-                                   target="_blank">آشپزخانه</a></li>
-                            <li><a href="/Main/Home-and-Kitchen/Serving/" title="سرو و پذیرایی" target="_blank">سرو و
-                                    پذیرایی</a></li>
-                            <li><a href="/Main/Home-and-Kitchen/Decorative/" title="دکوراتیو"
-                                   target="_blank">دکوراتیو</a></li>
-                            <li><a href="/Main/Home-and-Kitchen/BedandBath/" title="خواب و حمام" target="_blank">خواب و
-                                    حمام</a></li>
-                            <li><a href="/Main/Home-and-Kitchen/Cleaning/" title="شستشو و نظافت" target="_blank">شستشو و
-                                    نظافت</a></li>
-                            <li><a href="/Main/Home-and-Kitchen/Tools/" title="ابزار" target="_blank">ابزار</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <span class="title"><a title="زیبایی و سلامتی"
-                                               href="/Main/Personal-Appliance">زیبایی و سلامتی</a>
-                        </span>
-                        <ul>
-                            <li><a href="/Main/Personal-Appliance/Perfume-All/" title="عطر" target="_blank">عطر</a></li>
-                            <li><a href="/Main/Personal-Appliance/Beauty/" title="لوازم آرایشی" target="_blank">لوازم
-                                    آرایشی</a></li>
-                            <li><a href="/Main/Personal-Appliance/Hair-Clipper/" title="لوازم بهداشتی" target="_blank">لوازم
-                                    بهداشتی</a></li>
-                            <li><a href="/Main/Personal-Appliance/Electrical-Personal-Care/" title="لوازم شخصی برقی"
-                                   target="_blank">لوازم شخصی برقی</a></li>
-                            <li><a href="/Main/Personal-Appliance/Watch-Clock/" title="ساعت" target="_blank">ساعت</a>
-                            </li>
-                            <li><a href="/Main/Personal-Appliance/Jewelery/" title="زیور آلات" target="_blank">زیور
-                                    آلات</a></li>
-                            <li><a href="/Main/Personal-Appliance/Health-Care/" title="ابزار سلامت" target="_blank">ابزار
-                                    سلامت</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <span class="title"><a title="فرهنگ و هنر" href="/Main/Book-And-Media">فرهنگ و هنر</a></span>
-                        <ul>
-                            <li><a href="/Main/Book-And-Media/Handicraft/" title="صنایع دستی" target="_blank">صنایع
-                                    دستی</a></li>
-                            <li><a href="/Main/Book-And-Media/MusicalInstruments/" title="ادوات موسیقی" target="_blank">ادوات
-                                    موسیقی</a></li>
-                            <li><a href="/Main/Book-And-Media/Music-Audio-Content/" title="موسیقی" target="_blank">موسیقی</a>
-                            </li>
-                            <li><a href="/Main/Book-And-Media/Film-Video-Content/" title="فیلم" target="_blank">فیلم</a>
-                            </li>
-                            <li><a href="/Main/Book-And-Media/Software-Games/" title="نرم افزار و بازی" target="_blank">نرم
-                                    افزار و بازی</a></li>
-                            <li><a href="/Main/Book-And-Media/Multimedia-Training-Pack/" title="محتوای آموزشی"
-                                   target="_blank">محتوای آموزشی</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <span class="title"><a title="ورزش و سرگرمی" href="/Main/Sport-Entertainment">ورزش و سرگرمی</a>
-                        </span>
-                        <ul>
-                            <li><a href="/Main/Sport-Entertainment/Sport/" title="لوازم ورزشی" target="_blank">لوازم
-                                    ورزشی</a></li>
-                            <li><a href="/Main/Sport-Entertainment/Traveling-Equipment/" title="تجهیزات سفر"
-                                   target="_blank">تجهیزات سفر</a></li>
-                            <li><a href="/Main/Sport-Entertainment/SportShoes/" title="کفش ورزشی" target="_blank">کفش
-                                    ورزشی</a></li>
-                            <li><a href="/Main/Sport-Entertainment/Sports-Wear/" title="پوشاک ورزشی" target="_blank">پوشاک
-                                    ورزشی</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <span class="title"><a title="مادر و کودک" href="/Main/Mother-and-Child">مادر و کودک</a></span>
-                        <ul>
-                            <li><a href="/Main/Mother-and-Child/Safety-and-Care/" title="ایمنی و مراقبت"
-                                   target="_blank">ایمنی و مراقبت</a></li>
-                            <li><a href="/Main/Mother-and-Child/Dining-Accessories/" title="غذاخوری" target="_blank">غذاخوری</a>
-                            </li>
-                            <li><a href="/Main/Mother-and-Child/Personal-Accessories/" title="لوازم شخصی"
-                                   target="_blank">لوازم شخصی</a></li>
-                            <li><a href="/Main/Mother-and-Child/Health-and-Bathroom-Tools/" title="بهداشت و حمام"
-                                   target="_blank">بهداشت و حمام</a></li>
-                            <li><a href="/Main/Mother-and-Child/Promenade-and-Travel-Accessories/" title="گردش و سفر"
-                                   target="_blank">گردش و سفر</a></li>
-                            <li><a href="/Main/Mother-and-Child/Entertainment-and-Games-Equipment/"
-                                   title="سرگرمی و آموزشی" target="_blank">سرگرمی و آموزشی</a></li>
-                            <li><a href="/Main/Mother-and-Child/Baby-Bedding/" title="خواب کودک" target="_blank">خواب
-                                    کودک</a></li>
-                            <li><a href="/Main/Mother-and-Child/Children-and-Baby-Clothing/" title="لباس کودک و نوزاد"
-                                   target="_blank">لباس کودک و نوزاد</a></li>
-                        </ul>
-                    </div>
+                            @if($cats->sub_cat->count())
+                                <ul>
+                                    @foreach($cats->sub_cat as $sub)
+                                        <li><a href="/Main/Electronic-Devices/Mobile/" title="{{$sub->name}}"
+                                               target="_blank">{{$sub->name}}</a>
+                                        </li>
+                                    @endforeach
+
+                                </ul>
+                            @endif
+
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
