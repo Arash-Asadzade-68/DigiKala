@@ -68,10 +68,10 @@
     </div>
     <div class="container-fluid">
         <div class="row navigation">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 menu-top">
+                        <div class="col-lg-12 menu-top">
                             <div class="myNav">
                                 <ul class="root">
                                     @foreach(App\Category::where('parent_id',0)->get() as $cats)

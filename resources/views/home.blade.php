@@ -7,7 +7,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <a href="" style="margin-top: 10px;">
+            <a href="">
                 <img class="img-fluid" src="{{asset('images/discount.jpg')}}" alt="">
             </a>
         </div>

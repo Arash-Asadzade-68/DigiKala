@@ -565,7 +565,7 @@ a:hover, a:focus {
 
 /*Digi Nav*/
 /*Responsive Digi Nav*/
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
     .myNav .root {
         height: 100%;
     }
