@@ -52,17 +52,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <a href="#" data-toggle="dropdown">
 
-                            <img src="{{asset('images/user2-160x160.jpg')}}" class="user-image" alt="User Image">
+                            <img src="{{Auth::user()->photo->path}}" class="user-image" alt="User Image">
 
                             <span class="hidden-xs">{{Auth::user()->name}}</span>
                         </a>
                         <ul class="dropdown-menu">
 
                             <li class="user-header">
-                                <img src="{{asset('images/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                                <img src="{{Auth::user()->photo->path}}" class="img-circle" alt="User Image">
 
                                 <p>
-                                   {{Auth::user()->name}}- توسعه دهنده صفحات وب
+                                   {{Auth::user()->name}}- {{Auth::user()->aboutMe}}
                                     <small>سال 1397</small>
                                 </p>
                             </li>
@@ -89,7 +89,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <div class="user-panel ">
                 <div class="pull-right image">
-                    <img  src="{{asset('images/user2-160x160.jpg')}}" class="user-image" alt="">
+                    <img  src="{{Auth::user()->photo->path}}" class="user-image" alt="">
                 </div>
                 <div class="pull-right info">
                     <p>{{Auth::user()->name}}</p>

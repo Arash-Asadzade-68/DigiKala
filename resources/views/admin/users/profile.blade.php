@@ -25,9 +25,9 @@
                                 <span class="box-bottom">طراح صفحات وب</span>
                             </div>
 
-                            <div class="col-xl-2" style="margin-top: 20px;">
+                            <div class="col-xl-2" style="margin-top: 20px; padding-right: 0; padding-left: 0;">
                                 <div>
-                                    <img src="{{$user->photo ? $user->photo->path : asset('images/user.png')}}" alt="">
+                                    <img width="150px" height="150px" src="{{$user->photo ? $user->photo->path : asset('images/user.png')}}" alt="" class="rounded-circle">
                                 </div>
                                 <span>{{$user->role->name}}</span>
                             </div>
