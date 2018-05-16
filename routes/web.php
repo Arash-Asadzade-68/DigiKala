@@ -30,4 +30,6 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
         return view('layouts.admin');
     });
     Route::resource('users','UsersController');
+    Route::resource('categories','CategoryController');
+    Route::get('categories/properties/{category}','CategoryController@properties')->name('categories.properties');
 });

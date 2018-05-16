@@ -124,7 +124,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="#">ایجاد دسته</a></li>
-                        <li><a href="#">مدیریت دسته</a></li>
+                        <li><a href="{{route('categories.index')}}">مدیریت دسته</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -198,7 +198,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </footer>
 
 </div>
-
+</body>
 <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
 
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
@@ -206,7 +206,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('js/adminlte.min.js')}}"></script>
 <script src="{{asset('js/respond.min.js')}}"></script>
 <script src="{{asset('js/html5shiv.min.js')}}"></script>
-@yield('script')
-
-</body>
+@yield('scripts')
 </html>
