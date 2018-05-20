@@ -52,14 +52,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <a href="#" data-toggle="dropdown">
 
-                            <img src="{{Auth::user()->photo->path}}" class="user-image" alt="User Image">
+                            <img src="{{Auth::user()->photo?Auth::user()->photo->path : asset('images/user(2).png')}}" class="user-image" alt="User Image">
 
                             <span class="hidden-xs">{{Auth::user()->name}}</span>
                         </a>
                         <ul class="dropdown-menu">
 
                             <li class="user-header">
-                                <img src="{{Auth::user()->photo->path}}" class="img-circle" alt="User Image">
+                                <img src="{{Auth::user()->photo? Auth::user()->photo->path : asset('images/user.png')}}" class="img-circle" alt="User Image">
 
                                 <p>
                                    {{Auth::user()->name}}- {{Auth::user()->aboutMe}}
@@ -89,7 +89,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <div class="user-panel ">
                 <div class="pull-right image">
-                    <img  src="{{Auth::user()->photo->path}}" class="user-image" alt="">
+                    <img  src="{{Auth::user()->photo?Auth::user()->photo->path : asset('images/user(2).png')}}" class="user-image" alt="">
                 </div>
                 <div class="pull-right info">
                     <p>{{Auth::user()->name}}</p>
@@ -123,8 +123,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#">ایجاد دسته</a></li>
-                        <li><a href="{{route('categories.index')}}">مدیریت دسته</a></li>
+                        <li><a href="{{route('categories.index')}}">مدیریت دسته ها</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

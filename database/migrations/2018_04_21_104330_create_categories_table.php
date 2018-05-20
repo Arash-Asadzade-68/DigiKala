@@ -16,9 +16,10 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->text('link');
-            $table->text('props');
-            $table->text('props_values');
+            $table->text('link')->nullable();
+            $table->text('props')->nullable();
+            $table->text('props_values')->nullable();
+            $table->string('path')->nullable();
             $table->integer('parent_id');
             $table->timestamps();
         });

@@ -498,12 +498,13 @@ body,.firstrow > ul > li  {
 
 .myNav ul > li > ul.level > li .submenu .rows .firstrow > ul > li > ul > li > a {
     text-decoration: none;
+    padding-right: 10px;
 }
 
 .myNav ul > li > ul.level > li .submenu .rows .firstrow > ul > li > ul > li.title > a {
-    padding-right: 5px;
     color: #16c1f3;
     text-decoration: none;
+    padding-right: 0!important;
 }
 
 .myNav a {
@@ -525,8 +526,6 @@ a:hover, a:focus {
 }
 
 .myNav ul.root > li > ul.level > li .submenu .lastrow {
-    background-image: url(../images/mobile.png);
-    background-repeat: no-repeat;
     left: 15px;
     bottom: 0;
 }

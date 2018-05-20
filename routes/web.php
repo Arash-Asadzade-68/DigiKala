@@ -32,4 +32,5 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
     Route::resource('users','UsersController');
     Route::resource('categories','CategoryController');
     Route::get('categories/properties/{category}','CategoryController@properties')->name('categories.properties');
+    Route::post('categories/delete','CategoryController@categoriesDelete')->name('categories.delete');
 });

@@ -109,7 +109,10 @@
 
                                                                             </ul>
                                                                         </div>
-                                                                        <div class="lastrow img-fluid"></div>
+                                                                        <div >
+                                                                            <img class="lastrow img-fluid" src="{{asset('images/category/'.$sub->path)}}"
+                                                                                 alt="">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -133,7 +136,7 @@
     </div>
 </head>
 
-<body >
+<body>
 <div class="container-fluid" style="background-color:#ddd; padding-top: 10px; padding-bottom: 10px;">
     @yield('content')
 </div>
