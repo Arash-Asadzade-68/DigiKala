@@ -117,14 +117,6 @@
                             </div>
                         </div>
                     </div>
-                    <form class="align-content-center form-inline" method="Post" action="/admin/categories/delete">
-                        @csrf
-                        @method('DELETE')
-                        <select name="checkboxArray">
-                            <option value="">حذف همه</option>
-                        </select>
-
-                        <input class="btn btn-primary m-2" type="submit" name="submit" value="حذف">
                     @if($categories)
                         <table class="table shadow table-responsive-xl table-dark table-hover"
                                style="border-radius: 4px; font-size: 12pt;">
@@ -262,8 +254,6 @@
                             {{$categories->render()}}
                         </div>
                     @endif
-                    </form>
-
                 </div>
             </div>
         </div>
